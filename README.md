@@ -41,6 +41,8 @@
   
 > 🧩 Grab the latest `alpha` release directly from our [Releases Page](https://github.com/One4Lots/release/releases/tag/alpha).
 
+> ⚠️ Version Naming Used From `GREEK` alphabet, It's not the traditional `alpha` or `beta` Stage Build.
+
 </div>
 
 <br>
@@ -63,8 +65,8 @@ We offer two distinct builds tailored to your specific system environment. Pleas
 
 | Variant | Description & Use Case |
 | :--- | :--- |
-| **Standard Build** | The pure, stock kernel experience. Ideal for users who do not require root, or who prefer to manually flash traditional rooting solutions like Magisk or APatch. |
-| **KernelSU-Next** | Includes natively integrated KernelSU-Next drivers. Features manual hooks for a seamless, undetectable root experience directly from the kernel level. |
+| **Standard Build** | The pure, stock kernel experience. Ideal for users who do not require root, or who prefer to manually flash traditional rooting solutions like `Magisk`. |
+| **KernelSU-Next** | Includes natively integrated `KernelSU-Next` drivers. Features `MANUAL` hooks for a seamless, undetectable root experience directly from the kernel level. |
 
 ---
 
@@ -77,7 +79,7 @@ We offer two distinct builds tailored to your specific system environment. Pleas
 
 ## 🛑 Important Notes
 
-> **⚠️ Warranty & Liability Disclaimer:** > By flashing this custom kernel, you acknowledge that you are fully responsible for any modifications made to your hardware. I am not liable for any system instability, bricked devices, hardware degradation, or data loss. 
+> **⚠️ Warranty & Liability Disclaimer:** By flashing this custom kernel, you acknowledge that you are fully responsible for any modifications made to your hardware. I am not liable for any system instability, bricked devices, hardware degradation, or data loss. 
 > 
 > **Always perform a full `boot` and `dtbo` backup via your custom recovery before proceeding.** Ensure you are flashing over a compatible, supported custom ROM.
 
