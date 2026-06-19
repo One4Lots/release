@@ -39,9 +39,9 @@
 
 <br>
   
-> 🧩 Grab the latest `alpha` release directly from our [Releases Page](https://github.com/One4Lots/release/releases/tag/alpha).
+> 🧩 Grab the latest **beta** release directly from our [Releases Page](https://github.com/One4Lots/release/releases/tag/alpha).
 
-> ⚠️ Version Naming Used From `GREEK` alphabet, It's not the traditional `alpha` or `beta` Stage Build.
+> ⚠️ Version Naming Used From **GREEK** alphabet, It's not the traditional **Alpha** or **Beta** Stage Build.
 
 </div>
 
