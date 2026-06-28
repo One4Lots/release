@@ -39,7 +39,7 @@
 
 <br>
   
-> 🧩 Grab the latest **Gamma(γ)** release directly from our [Releases Page](https://github.com/One4Lots/release/releases/tag/gamma).
+> 🧩 Grab the latest **Delta(δ)** release directly from our [Releases Page](https://github.com/One4Lots/release/releases/tag/delta).
 
 > ⚠️ Version Naming Used From **GREEK** alphabet, It's not the traditional **Alpha** or **Beta** Stage Build.
 
