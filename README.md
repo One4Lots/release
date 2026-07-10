@@ -66,7 +66,7 @@ We offer two distinct builds tailored to your specific system environment. Pleas
 | Variant | Description & Use Case |
 | :--- | :--- |
 | **Standard Build** | The pure, stock kernel experience. Ideal for users who do not require root, or who prefer to manually flash traditional rooting solutions like `Magisk`. |
-| **KernelSU-Next** | Includes natively integrated `KernelSU-Next` drivers. Features `MANUAL` hooks for a seamless, undetectable root experience directly from the kernel level. |
+| **Backslashxx KernelSU** | Includes natively integrated `KernelSU` drivers. Features `KSU_TAMPER_SYSCALL_TABLE` for a seamless, undetectable root experience directly from the kernel level. |
 
 ---
 
