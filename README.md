@@ -39,7 +39,7 @@
 
 <br>
   
-> 🧩 Grab the latest **Delta(δ)** release directly from our [Releases Page](https://github.com/One4Lots/release/releases/tag/delta).
+> 🧩 Grab the latest **Pi(π)** release directly from our [Releases Page](https://github.com/One4Lots/release/releases/tag/pi).
 
 > ⚠️ Version Naming Used From **GREEK** alphabet, It's not the traditional **Alpha** or **Beta** Stage Build.
 
