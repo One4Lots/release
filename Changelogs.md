@@ -2,6 +2,48 @@
 
 All notable changes to this kernel will be documented in this file.
 
+## [Zeta] - 2026-07-24
+
+### Added
+- **Scheduler:** Implemented asymmetric CPU capacity wakeup scan and aggressive load balancing for SCHED_IDLE CPUs.
+- **Memory:** Added automatic memory compaction mechanism to reduce fragmentation.
+- **Security/Exec:** Added node tampering blacklist function for `power@2.0` and `IOP`.
+- **Core:** Implemented `rcu_work` and migrated `cgroup` and `fs/aio` to use it instead of explicit rcu and work items.
+- **Security:** Implemented `thread_struct` whitelist for hardened usercopy on arm64.
+
+### Changed (Scheduler & CPU)
+- **Defconfig:** Switched default scheduling algorithm from WALT to PELT (`xiaomi/miatoll_defconfig`).
+- **Defconfig:** Enabled `CONFIG_SCHED_AUTOGROUP` by default.
+- **Task Placement:** Configured `top-app` tasks to prefer exclusive mid-cluster CPU placement.
+- **Task Placement:** Refined scheduler logic to avoid placing tasks on little CPUs blindly due to sync wakeups.
+- **Load Tracking:** Separated capacity margins for boosted tasks and updated scheduler to use actual CPU capacity to calculate boosted utilization.
+- **CPUFreq:** Exposed `schedutil` limit tunables cluster-wise and replaced the global stats lock with atomics.
+- **Thermals:** Optimized `step_wise` thermal mitigation evaluation, stable trend handling, and cleared mitigations upon reaching safe thresholds.
+
+### Changed (Locking & Core Kernel)
+- **Locking (rwsem):** Massive rewrite and optimization of read-write semaphores (`rwsem`). Implemented a new locking scheme, optimized for uncontended lock acquisition, enabled time-based optimistic spinning, and implemented lock starvation handoff.
+- **Locking (Spinlocks):** Replaced arm64 ticket lock implementation with `qspinlock`.
+- **Locking (Mutex):** Optimized `__mutex_trylock_fast()`.
+- **Libraries (Bitmap):** Extensive micro-optimizations across `lib/bitmap.c` and `linux/bitmap.h`, replacing slow array operations and simplifying page buffer prints.
+- **Libraries:** Inlined `memzero_explicit()` and optimized `rbtree` to avoid generating duplicate cached versions.
+- **RCU:** Restricted expedited grace periods (GP) to allow only one to run concurrently with wakeups.
+
+### Changed (GPU, Display & Memory)
+- **Memory (ION):** Enabled ION pool auto-refill and set fill mark to 100MB in defconfig.
+- **Memory (ION):** Optimized refill behavior (shrink lower order pools first, skip order 0, defer on low zone watermarks, and removed CPU binding of refill kthreads).
+- **DRM/Display:** Sped up interrupt processing upon commit.
+- **GPU (KGSL):** Prevented dynamic allocation of memory for temporary/small command buffers to reduce overhead.
+- **GPU (KGSL):** Fixed sysfs to report the correct GPU frequency.
+
+### Fixed
+- **Scheduler:** Reverted buggy userspace affining threads and use-after-free issues in `is_sched_lib_based_app()`.
+- **Scheduler:** Fixed `is_min_capacity_cpu()` implementation and reduced softirq conflicts with RT tasks.
+- **Locking:** Fixed implicit declarations, error arithmetic on incomplete types, and removed unnecessary `BUG_ON()` calls in `qspinlock`.
+- **Build/Compilation:** Fixed build breakages when `CONFIG_SCHED_WALT=n` and `PELT` is enabled, and resolved C99 extension compilation warnings.
+- **Misc:** Cleaned up excessive hyphens in Kconfigs, removed unneeded includes, and fixed checkpatch errors across staging drivers.
+
+---
+
 ## [Epsilon] - 2026-07-16
 
 ### Build Variants Added
