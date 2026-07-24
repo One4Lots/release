@@ -39,7 +39,7 @@
 
 <br>
   
-> 🧩 Grab the latest **Epsilon (ε)** release directly from our [Releases Page](https://github.com/One4Lots/release/releases/tag/epsilon).
+> 🧩 Grab the latest **Zeta (ζ)** release directly from our [Releases Page](https://github.com/One4Lots/release/releases/tag/epsilon).
 
 > ⚠️ Version Naming Used From **GREEK** alphabet, It's not the traditional **Alpha** or **Beta** Stage Build.
 
